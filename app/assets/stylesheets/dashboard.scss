@@ -164,7 +164,10 @@
     background: white;
     background: var(--theme-container-background, white);
     &.single-article-unpublished {
-      background: lighten($yellow, 20%);
+      background: 
+        linear-gradient(var(--theme-container-background, white) 0, var(--theme-container-background, white) 100%), 
+        linear-gradient(lighten($yellow, 20%) 0, lighten($yellow, 20%) 100%);
+      background-blend-mode: hard-light;
     }
     .dashboard-collection-org-details {
       .dashboard-top-pill {
